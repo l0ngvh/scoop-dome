@@ -1,0 +1,21 @@
+{
+    "version": "0.1.0",
+    "description": "Cross-platform tiling window manager",
+    "homepage": "https://github.com/longvh/dome",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/longvh/dome/releases/download/v0.1.0/dome-0.1.0-x86_64-pc-windows-msvc.zip",
+            "hash": "PLACEHOLDER_ZIP_SHA256"
+        }
+    },
+    "bin": "dome.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/longvh/dome/releases/download/v$version/dome-$version-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

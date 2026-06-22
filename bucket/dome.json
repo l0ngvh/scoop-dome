@@ -1,21 +1,21 @@
 {
-    "version": "0.1.0",
-    "description": "Cross-platform tiling window manager",
-    "homepage": "https://github.com/l0ngvh/Dome",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/l0ngvh/Dome/releases/download/v0.1.0/dome-0.1.0-x86_64-pc-windows-msvc.zip",
-            "hash": "PLACEHOLDER_ZIP_SHA256"
-        }
-    },
-    "bin": "dome.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/l0ngvh/Dome/releases/download/v$version/dome-$version-x86_64-pc-windows-msvc.zip"
-            }
-        }
+  "version": "nightly",
+  "description": "Cross-platform tiling window manager",
+  "homepage": "https://github.com/l0ngvh/Dome",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/l0ngvh/Dome/releases/download/v0.1.0/dome-0.1.0-x86_64-pc-windows-msvc.zip",
+      "hash": "9baeba1c6cdae2ba9e2d6ba9b53db7cba366c4f62f1f904bd1c3717c96036257"
     }
+  },
+  "bin": "dome.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/l0ngvh/Dome/releases/download/v$version/dome-$version-x86_64-pc-windows-msvc.zip"
+      }
+    }
+  }
 }

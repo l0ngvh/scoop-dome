@@ -1,0 +1,25 @@
+name: Update on Release
+
+on:
+  repository_dispatch:
+    types: [new-release]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update manifest
+        env:
+          VERSION: ${{ github.event.client_payload.version }}
+          SHA_ZIP: ${{ github.event.client_payload.sha_zip }}
+        run: |
+          jq ".version = \"$VERSION\" | .architecture.\"64bit\".hash = \"$SHA_ZIP\"" bucket/dome.json > tmp.json
+          mv tmp.json bucket/dome.json
+      - name: Commit and push
+        run: |
+          git config user.name "dome-bot"
+          git config user.email "bot@dome.app"
+          git add bucket/dome.json
+          git commit -m "chore: bump to v${{ github.event.client_payload.version }}"
+          git push

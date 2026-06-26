@@ -9,7 +9,9 @@
             "hash": ""
         }
     },
-    "bin": "dome.exe",
+    "shortcuts": [
+        ["dome.exe", "Dome"]
+    ],
     "checkver": "github",
     "autoupdate": null
 }

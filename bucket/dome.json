@@ -6,7 +6,7 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/l0ngvh/Dome/releases/download/v0.1.0/dome-0.1.0-x86_64-pc-windows-msvc.zip",
-      "hash": "9a8948f0fd61506f2710c0068b9b4acdb854145457b4a8a4b114aa21d976f616"
+      "hash": "7122bc7b9ddc7e1e25082ebf280718a846f68ed3c6660fbbb392db99ba20edcc"
     }
   },
   "shortcuts": [

@@ -12,6 +12,7 @@
     "shortcuts": [
         ["dome.exe", "Dome"]
     ],
+    "bin": "dome.exe",
     "checkver": "github",
     "autoupdate": null
 }

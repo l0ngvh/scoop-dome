@@ -1,12 +1,12 @@
 {
-  "version": "2026.08.01.16bb6d9",
+  "version": "2026.08.01.fe503ee",
   "description": "Cross-platform tiling window manager (nightly build)",
   "homepage": "https://github.com/l0ngvh/Dome",
   "license": "MIT",
   "architecture": {
     "64bit": {
       "url": "https://github.com/l0ngvh/Dome/releases/download/nightly/dome-nightly-x86_64-pc-windows-msvc.zip",
-      "hash": "098873dd084067f274252f381b7074750667f0ebc69100bff661135d147f9b93"
+      "hash": "b6175c5fc8af8716614a28aff096bbd767dc3dae998db38f316f855a27833b1c"
     }
   },
   "shortcuts": [

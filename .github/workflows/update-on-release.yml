@@ -17,8 +17,16 @@ jobs:
           SHA_ZIP: ${{ github.event.client_payload.sha_zip }}
         run: |
           set -euo pipefail
-          jq ".version = \"$VERSION\" | .architecture.\"64bit\".hash = \"$SHA_ZIP\"" \
-            bucket/dome-nightly.json > tmp.json
+          if [ -z "$VERSION" ] || [ -z "$SHA_ZIP" ]; then
+            echo "::error::dispatch payload is missing version or sha_zip"
+            exit 1
+          fi
+          jq --arg v "$VERSION" --arg h "$SHA_ZIP" '
+            .version = $v
+            | .architecture."64bit".url =
+                "https://github.com/l0ngvh/Dome/releases/download/nightly-\($v)/dome-nightly-\($v)-x86_64-pc-windows-msvc.zip"
+            | .architecture."64bit".hash = $h
+          ' bucket/dome-nightly.json > tmp.json
           mv tmp.json bucket/dome-nightly.json
       - name: Commit and push
         env:
